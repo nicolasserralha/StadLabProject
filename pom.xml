@@ -34,17 +34,19 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     
 	<spring.version>4.3.17.RELEASE</spring.version>
-	<hibernate.version>5.0.10.Final</hibernate.version>
+	<hibernate.version>5.3.1.Final</hibernate.version>
  	
   </properties>
   
 	<dependencies>
+
 		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>7.0</version>
-			<scope>provided</scope>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		    <scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.jboss.spec.javax.servlet</groupId>
 			<artifactId>jboss-servlet-api_3.1_spec</artifactId>
@@ -52,30 +54,56 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- DEPENDÊNCIAS DO SPRING -->
-
-		
 		<dependency>
-	    	<groupId>org.hibernate</groupId>
-    		<artifactId>hibernate-entitymanager</artifactId>
-	    	<version>${hibernate.version}</version>
-	    	<scope>provided</scope>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
 		</dependency>
 		
+		<dependency>
+		    <groupId>javax.servlet.jsp</groupId>
+		    <artifactId>jsp-api</artifactId>
+		    <version>2.1</version>
+		    <scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jsp-api</artifactId>
+		    <version>2.0</version>
+		    <scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>servlet-api</artifactId>
+		    <version>2.5</version>
+		    <!-- <scope>provided</scope> -->
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.hibernate.javax.persistence</groupId>
+		    <artifactId>hibernate-jpa-2.1-api</artifactId>
+		    <version>1.0.0.Final</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-core</artifactId>
+		    <version>${hibernate.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+
 	  	<dependency>
 	    	<groupId>org.hibernate</groupId>
 	    	<artifactId>hibernate-validator</artifactId>
 	    	<version>5.2.4.Final</version>
 	    	<scope>provided</scope>
-	    	<!-- <version>4.3.2.Final</version> -->
 		</dependency>
 		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
 		
+		<!-- DEPENDÊNCIAS DO SPRING -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-orm</artifactId>
@@ -107,57 +135,63 @@
 		</dependency>
 		
 		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.2</version>
+		</dependency>
+		
+
+		
+		<!-- teoricamente nao precisa -->
+		<dependency>
+	    	<groupId>org.hibernate</groupId>
+    		<artifactId>hibernate-entitymanager</artifactId>
+	    	<version>${hibernate.version}</version>
+	    	<scope>provided</scope>
+		</dependency>
+		
+		<!-- teoricamente nao precisa --> 
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
- 
+ 		
+ 		<!-- teoricamente nao precisa --> 
 	 	<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<version>${spring.version}</version>
 	 	</dependency>
 		
+		<!-- Teoricamente nao precisa  -->
 		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>1.2</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+ <!--	Teoricamente nao precisa 
 		<dependency>
-		    <groupId>javax.servlet.jsp</groupId>
-		    <artifactId>jsp-api</artifactId>
-		    <version>2.1</version>
-		    <scope>provided</scope>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl-api -->
-		<dependency>
-		    <groupId>javax.servlet.jsp.jstl</groupId>
-		    <artifactId>jstl-api</artifactId>
-		    <version>1.2</version>
-		    <exclusions>
-		    	<exclusion>
-		    		<groupId>javax.servlet</groupId>
-		    		<artifactId>servlet.api</artifactId>
-		    	</exclusion>
-		    </exclusions>
-		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.glassfish.web/jstl-impl -->
+-->
+<!-- 	
 		<dependency>
 		    <groupId>org.glassfish.web</groupId>
 		    <artifactId>jstl-impl</artifactId>
 		    <version>1.2</version>
-		</dependency>	
-
-		<dependency>
-		    <groupId>org.hibernate.javax.persistence</groupId>
-		    <artifactId>hibernate-jpa-2.1-api</artifactId>
-		    <version>1.0.0.Final</version>
-		</dependency>
-
+		</dependency>	 
+-->
+<!-- 	<dependency>
+		    <groupId>javax.servlet.jsp.jstl</groupId>
+		    <artifactId>jstl-api</artifactId>
+		    <version>1.2</version>
+		</dependency> 
+-->
 		
 	</dependencies>
   

@@ -7,14 +7,15 @@
    	 
 	<persistence-unit name="stadlabPU">
 
-	<class>br.com.stadlab.model.Cliente</class>
+<!-- 	<class>br.com.stadlab.model.Cliente</class>
 	<class>br.com.stadlab.model.Equipamento</class>
 	<class>br.com.stadlab.model.Estabelecimento</class>
 	<class>br.com.stadlab.model.TipoEstabelecimento</class>
 	<class>br.com.stadlab.model.Medicao</class>
 	<class>br.com.stadlab.model.Usuario</class>
       
-    <exclude-unlisted-classes>true</exclude-unlisted-classes> 
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>  
+-->
       
       <properties>
          <property name="hibernate.show_sql" value="true"/>
