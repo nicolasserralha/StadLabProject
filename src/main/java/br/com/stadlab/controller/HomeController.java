@@ -1,4 +1,4 @@
-package br.com.stadlab.controller;
+ package br.com.stadlab.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

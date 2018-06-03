@@ -3,8 +3,11 @@ package br.com.stadlab.model;
 import java.util.Collection;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -25,6 +28,8 @@ public class TipoEstabelecimento {
 
 	@Id
 	@Column(name="id_tipo")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="tipoeEstabelecimento")
+	@SequenceGenerator(name="tipoeEstabelecimento",sequenceName="SQ_T_TIPOESTABELECIMENTO",allocationSize=1)
 	private Integer id;
 	
 	@Column(name="ds_tipo", length=30, nullable=false)

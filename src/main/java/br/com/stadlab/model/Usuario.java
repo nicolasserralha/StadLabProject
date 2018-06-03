@@ -2,9 +2,12 @@ package br.com.stadlab.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -24,6 +27,8 @@ public class Usuario {
 
 	@Id
 	@Column(name="id_usuario")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="usuario")
+	@SequenceGenerator(name="usuario",sequenceName="SQ_T_USUARIO",allocationSize=1)
 	private Integer id;
 	
 	@Column(name="ds_usuario", length=50, nullable=false)

@@ -3,7 +3,14 @@ package br.com.stadlab.model;
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
 
 /**
  * Entity implementation class for Entity: Cliente
@@ -15,6 +22,8 @@ public class Cliente implements Serializable {
 	   
 	@Id
 	@Column(name="id_cliente")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="cliente")
+	@SequenceGenerator(name="cliente",sequenceName="SQ_T_CLIENTE",allocationSize=1)
 	private Integer id;
 	
 	@Column(name="nr_celular")
