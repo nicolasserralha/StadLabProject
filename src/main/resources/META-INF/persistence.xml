@@ -12,6 +12,7 @@
 	<class>br.com.stadlab.model.TipoEstabelecimento</class>
 	<class>br.com.stadlab.model.Medicao</class>
 	<class>br.com.stadlab.model.Usuario</class>
+	<class>br.com.stadlab.model.Dashboard</class>
 	<exclude-unlisted-classes>true</exclude-unlisted-classes>  
       
       <properties>

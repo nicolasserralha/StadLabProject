@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="<c:url value='/resources/css/main.css' />">
 </head>
 <body>
-	<c:url value="/login" var="login"></c:url>
+
 	<c:url value="/sobre" var="sobre"></c:url>
+	<c:url value="/estabelecimento/form" var="estabelecimento"></c:url>
+	
 	<div class='navbar navbar-static-top'>
       <div class='container' role='navigation'>
         <div class='navbar-header'>
@@ -29,13 +31,14 @@
         </div>
 
         <ul class='nav navbar-nav navbar-right collapse navbar-collapse'>
-          
+          <li><a href='#'>Tickets</a></li>
           <li><a href='#'>Stations</a></li>
           <li class='dropdown'>
-            <a href='/about' data-target='#' class='dropdown-toggle' data-toggle='dropdown'>About <span class='caret'></span></a>
+            <a href='/about' data-target='#' class='dropdown-toggle' data-toggle='dropdown'>Olá, ${nomeUsuario } <span class='caret'></span></a>
             <ul class='dropdown-menu' role='menu'>
-              <li><a href='#'>Our Story</a></li>
-              <li><a href='#'>Contact Us</a></li>
+              <li><a href="${estabelecimento }">Estabelecimentos</a></li>
+              <li><a href='#'>Equipamentos</a></li>
+              <li><a href='#'>Dashboard</a></li>
               <li class='divider'></li>
               <li><a href='blog.html'>Blog</a></li>
               <li class='divider'></li>
@@ -43,8 +46,6 @@
               <li><a href='#'>Facebook</a></li>
             </ul>
           </li>
-          <li><a href="${login }">Login</a></li>
-
         </ul>
       </div>
     </div>

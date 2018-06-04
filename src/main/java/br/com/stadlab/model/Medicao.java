@@ -32,5 +32,31 @@ public class Medicao {
 	@JoinColumn(name="id_equipamento")
 	@ManyToOne
 	private Equipamento equipamento;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Calendar getDataCriacao() {
+		return dataCriacao;
+	}
+
+	public void setDataCriacao(Calendar dataCriacao) {
+		this.dataCriacao = dataCriacao;
+	}
+
+	public Equipamento getEquipamento() {
+		return equipamento;
+	}
+
+	public void setEquipamento(Equipamento equipamento) {
+		this.equipamento = equipamento;
+	}
+	
+	
 	
 }

@@ -42,6 +42,7 @@ public class GenericDAOimpl<T,K> implements GenericDAO<T, K>{
 	public T buscar(K codigo) {
 		return em.find(classe,codigo);
 	}
+	
 
 /*	public void commit() throws Exception {
 		try{

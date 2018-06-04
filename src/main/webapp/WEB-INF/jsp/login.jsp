@@ -12,7 +12,7 @@
 		<form:form action="${action}" method="post">
 	  		<div class="form-group">
 	    		<label for="exampleInputEmail1">Email</label>
-	    		<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+	    		<input type="email" class="form-control" id="email" name="user" placeholder="Email">
 	  		</div>
 			<div class="form-group">
 				<label for="exampleInputPassword1">Senha</label>

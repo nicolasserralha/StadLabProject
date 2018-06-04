@@ -9,6 +9,7 @@
 		<jsp:attribute name="content">
 	
 		<h1>${nomeUsuario }</h1>
+		SOBRE NÓS
 	
 		</jsp:attribute>
 	</index:templateLogado>
@@ -19,6 +20,7 @@
 		<jsp:attribute name="content">
 	
 		<h1>${nomeUsuario }</h1>
+		SOBRE NÓS
 	
 		</jsp:attribute>
 	</index:templatePadrao>

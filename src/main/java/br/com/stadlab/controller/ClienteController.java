@@ -40,8 +40,6 @@ public class ClienteController {
     	
 		try {
 			Usuario usuario = new Usuario();
-
-			
 			String teste = req.getParameter("senha");
 			dao.cadastrar(cliente);
 			Integer idCliente = cliente.getId();

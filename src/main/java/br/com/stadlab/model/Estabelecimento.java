@@ -42,6 +42,10 @@ public class Estabelecimento {
 	@ManyToOne
 	private TipoEstabelecimento tipo;
 	
+	@JoinColumn(name = "id_cliente")
+	@ManyToOne
+	private Cliente cliente;
+	
 	public Estabelecimento() {
 		super();
 	}
