@@ -18,7 +18,7 @@ public class HomeController {
     public ModelAndView home(HttpSession session) {
 		Usuario usuario = usuarioLogado.getUsuario();
 		if(usuario == null) {
-			return new ModelAndView("index");	
+			return new ModelAndView("index");
 		}
 		else {
         String nome = usuario.getCliente().getNome();

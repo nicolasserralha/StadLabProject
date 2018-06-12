@@ -15,10 +15,11 @@
 <body>
 	<c:url value="/login" var="login"></c:url>
 	<c:url value="/sobre" var="sobre"></c:url>
+	<c:url value="/cliente/cadastrar" var="cadastro"></c:url>
 	<div class='navbar navbar-static-top'>
       <div class='container' role='navigation'>
         <div class='navbar-header'>
-          <a href='home.jsp' class='navbar-brand'>StadLabProject</a>
+          <a href='home.jsp' class='navbar-brand'>StadLab</a>
 
           <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='.navbar-collapse'>
             <span class='sr-only'>Toggle navigation</span>
@@ -30,7 +31,7 @@
 
         <ul class='nav navbar-nav navbar-right collapse navbar-collapse'>
           
-          <li><a href='#'>Stations</a></li>
+          <li><a href=${cadastro }>Cadastre-se</a></li>
           <li class='dropdown'>
             <a href='/about' data-target='#' class='dropdown-toggle' data-toggle='dropdown'>About <span class='caret'></span></a>
             <ul class='dropdown-menu' role='menu'>

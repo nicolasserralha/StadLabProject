@@ -7,30 +7,47 @@
 	<jsp:attribute name="content">
 
 	<div class="container">
-				
-		
+	
 		<c:url value="/estabelecimento/cadastrar" var="action"></c:url>
-		<form:form action="${action}" method="post" commandName="cliente">
+		<form:form action="${action}" method="post">
+		<label for="selectTipo">
+			<select id="selectTipo" class="selectpicker" name="tipoEstabelecimento">
+				<option value="vazio" selected="selected">Escolha</option>
+				<option value="Comercial" >Comercial</option>
+				<option value="Residencial">Residencial</option>
+			</select>
+		</label>
+		
 	  		<div class="form-group">
-	    		<label for="exampleInputEmail1">Nome</label>
-	    		<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+	    		<label for="endereco">Endereço</label>
+	    		<input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço">
 	  		</div>
+	  		
 	  		<div class="form-group">
-	    		<label for="exampleInputEmail1">Email</label>
-	    		<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+	    		<label for="bairro">Bairro</label>
+	    		<input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
 	  		</div>
+	  		
 	  		<div class="form-group">
-	    		<label for="exampleInputEmail1">Celular</label>
-	    		<input type="text" class="form-control" id="celular" name="celular" placeholder="Celular">
+	    		<label for="cidade">Cidade</label>
+	    		<input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade">
 	  		</div>
+	  		
 	  		<div class="form-group">
-	    		<label for="exampleInputEmail1">Cpf</label>
-	    		<input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF">
+	    		<label for="cep">Cep</label>
+	    		<input type="text" class="form-control" id="cep" name="cep" placeholder="Cep">
 	  		</div>
-			<div class="form-group">
-				<label for="exampleInputPassword1">Senha</label>
-				<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
-			</div>
+	  		
+	  		<div class="form-group">
+	    		<label for="uf">UF</label>
+	    		<input type="text" class="form-control" id="uf" name="uf" placeholder="UF">
+	  		</div>
+	  		
+	  		<div class="form-group">
+	    		<label for="complemento">Complemento</label>
+	    		<input type="text" class="form-control" id="complemento" name="complemento" placeholder="Complemento">
+	  		</div>
+
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form:form>
 		

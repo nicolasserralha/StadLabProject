@@ -3,11 +3,13 @@ package br.com.stadlab.model;
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Collection;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -37,6 +39,9 @@ public class Cliente implements Serializable {
 	
 	@Column(name="ds_nome")
 	private String nome;
+	
+	@OneToMany(mappedBy="cliente")
+	private Collection<Estabelecimento> estabelecimento;
 	
 	private static final long serialVersionUID = 1L;
 
@@ -78,5 +83,12 @@ public class Cliente implements Serializable {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	public Collection<Estabelecimento> getEstabelecimento() {
+		return estabelecimento;
+	}
+	public void setEstabelecimento(Collection<Estabelecimento> estabelecimento) {
+		this.estabelecimento = estabelecimento;
+	}
    
+	
 }

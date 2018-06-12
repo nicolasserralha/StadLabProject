@@ -46,7 +46,7 @@ public class LoginController {
 
     	} catch (Exception e){
     		e.printStackTrace();
-    		return new ModelAndView("login");
+    		return new ModelAndView("login").addObject("msg", e.getMessage());
     	}
 		attr.addFlashAttribute("msg", "Login falhou");
 		return new ModelAndView("login");
