@@ -1,8 +1,8 @@
 package br.com.stadlab.bean;
 
 import javax.ejb.Stateful;
-
 import org.springframework.stereotype.Component;
+
 import br.com.stadlab.model.Usuario;
 
 @Component

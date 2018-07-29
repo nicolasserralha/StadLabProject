@@ -44,7 +44,8 @@ public class EstabelecimentoController {
 		List<Estabelecimento> estabelecimentos = new ArrayList<Estabelecimento>();
 		Cliente cliente = usuario.getCliente();
 		try {
-			TipoEstabelecimento tipoEstabelecimento = tipoEstabelecimentoDao.buscarTexto(req.getParameter("tipoEstabelecimento"));
+			String tpestabelecimento = req.getParameter("tipoEstabelecimento");
+			TipoEstabelecimento tipoEstabelecimento = tipoEstabelecimentoDao.buscarTexto(tpestabelecimento);
 			estabelecimento.setTipo(tipoEstabelecimento);
 
 			estabelecimentoDao.cadastrar(estabelecimento);
