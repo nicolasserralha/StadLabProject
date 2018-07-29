@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 
 /**
@@ -20,6 +21,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="tb_cliente")
+@XmlRootElement(name = "Cliente")
 public class Cliente implements Serializable {
 	   
 	@Id
@@ -47,7 +49,8 @@ public class Cliente implements Serializable {
 
 	public Cliente() {
 		super();
-	}   
+	}
+	
 	public Integer getId() {
 		return this.id;
 	}
@@ -90,5 +93,18 @@ public class Cliente implements Serializable {
 		this.estabelecimento = estabelecimento;
 	}
    
-	
+	@Override
+	public String toString() {
+		return "Cliente [id="
+				+ id
+				+ ", celular="
+				+ celular
+				+"cpf="
+				+ cpf
+				+"email="
+				+ email
+				+"nome="
+				+nome
+				+"]";
+	}
 }

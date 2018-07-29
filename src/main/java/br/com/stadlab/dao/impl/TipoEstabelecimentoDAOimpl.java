@@ -1,5 +1,4 @@
 package br.com.stadlab.dao.impl;
-import java.util.List;
 
 import org.springframework.stereotype.Repository;
 import br.com.stadlab.dao.TipoEstabelecimentoDAO;
