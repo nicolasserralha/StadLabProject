@@ -9,9 +9,8 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd 
 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
 
-	<context:component-scan base-package="br.com.stadlab.controller,br.com.stadlab.bean,br.com.stadlab.model,br.com.stadlab.dao" />
+	<context:component-scan base-package="br.com.stadlab.service,br.com.stadlab.controller,br.com.stadlab.bean,br.com.stadlab.model,br.com.stadlab.dao" />
 	
-	<!-- SEM ESSA TAG ELE NÃO RETORNA O JSON -->
 	<mvc:annotation-driven />
 	 
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -41,5 +40,5 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<mvc:default-servlet-handler/>
-
+	
 </beans>

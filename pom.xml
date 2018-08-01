@@ -65,6 +65,12 @@
       		<artifactId>hibernate-c3p0</artifactId>
       		<version>${hibernate.version}</version>
    		 </dependency>
+   		 
+<!-- 		<dependency>
+		    <groupId>org.glassfish.jersey.ext</groupId>
+		    <artifactId>jersey-spring4</artifactId>
+		    <version>2.26</version>
+		</dependency> -->
 
 		<dependency>
 		    <groupId>junit</groupId>
